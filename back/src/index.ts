@@ -6,7 +6,10 @@ const app = express();
 const port: number = 3000;
 
 app.use(cors({ // somente esses hosts pode fazer request 
-  origin: 'http://localhost:5173'
+  origin: [
+    'http://localhost:5173',
+    'https://github-analytics-seven.vercel.app'
+  ]
 }))
 
 app.use('/api', analyticsRouter);

@@ -1,6 +1,6 @@
 import type { GithubProfileResponse, GithubRepoResponse, GithubProfile, GithubRepo, GithubLanguages } from "../types/github";
 
-const BASE_URL: string = "http://localhost:3000/api"
+const BASE_URL: string = "https://github-analytics-avaj.onrender.com/api"
 
 async function apiFetch<T>(path: string): Promise<T> { // chama o apiFetch e preenche o <T> com GithubProfile
     const response = await fetch(`${BASE_URL}${path}`)
