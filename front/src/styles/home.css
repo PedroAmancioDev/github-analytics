@@ -82,7 +82,6 @@
 .home-search-form {
     display: flex;
     gap: 12px;
-    background-color: var(--card-bg);
     padding: 8px;
     border: 2.5px solid var(--card-border);
     box-shadow: 4px 4px 0px var(--card-shadow);
