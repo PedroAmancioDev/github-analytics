@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Header Component (GitHub Link & Dark Mode Toggle)
+   ========================================================================== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    max-width: 100%;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    pointer-events: auto;
+}
+
+.header-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 2px solid var(--card-border);
+    box-shadow: 2px 2px 0px var(--card-shadow);
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.header-icon-btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px var(--card-shadow);
+    opacity: 0.95;
+}
+
+.header-icon-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--card-shadow);
+}

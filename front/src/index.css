@@ -1,5 +1,65 @@
-/* :root {
-} */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Tipografia */
+    --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-handwritten: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+
+    /* Variáveis de cores para o modo claro */
+    --bg-color: #f8fafc;
+    --dot-color: #cbd5e1;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+
+    /* Variáveis dos Cards e Componentes (Estilo Neo-brutalist / Sketch) */
+    --card-bg: #ffffff;
+    --card-border: #000000;
+    --card-shadow: #000000;
+    --card-img-bg: #f1f5f9;
+    --card-btn-bg: #000000;
+    --card-btn-color: #ffffff;
+    --title-underline: #000000;
+
+    /* Configurações do padrão de pontos */
+    --dot-size: 1.5px;
+    --dot-space: 24px;
+}
+
+/* Suporte a Dark Mode via classe ou atributo data-theme */
+:root.dark,
+[data-theme="dark"],
+body.dark {
+    --bg-color: #121212;
+    --dot-color: #30363d;
+    --text-color: #f0f6fc;
+    --text-muted: #8b949e;
+
+    --card-bg: #161b22;
+    --card-border: #f0f6fc;
+    --card-shadow: #30363d;
+    --card-img-bg: #0d1117;
+    --card-btn-bg: #f0f6fc;
+    --card-btn-color: #0d1117;
+    --title-underline: #f0f6fc;
+}
+
+/* Suporte a Dark Mode automático conforme preferência do sistema operacional */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]):not(.light) {
+        --bg-color: #0d1117;
+        --dot-color: #30363d;
+        --text-color: #f0f6fc;
+        --text-muted: #8b949e;
+
+        --card-bg: #161b22;
+        --card-border: #f0f6fc;
+        --card-shadow: #30363d;
+        --card-img-bg: #0d1117;
+        --card-btn-bg: #f0f6fc;
+        --card-btn-color: #0d1117;
+        --title-underline: #f0f6fc;
+    }
+}
 
 * {
     margin: 0;
@@ -7,8 +67,17 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    background-image: radial-gradient(var(--dot-color) var(--dot-size), transparent var(--dot-size));
+    background-size: var(--dot-space) var(--dot-space);
+    color: var(--text-color);
 }
 
 a {
